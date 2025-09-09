@@ -1,0 +1,60 @@
+.printPage {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Prompt', sans-serif;
+  background: white;
+  color: #111;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.formHeader h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.formContent p,
+.formFooter p,
+ul {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.printBtn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: #9b1c1c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.printBtn:hover {
+  background: #7a1212;
+}
+
+@media print {
+  .printBtn {
+    display: none;
+  }
+}

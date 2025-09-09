@@ -1,0 +1,20 @@
+.step-preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.step {
+  text-align: center;
+  margin: 0 20px;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 50%;
+  line-height: 30px;
+  color: white;
+}
+.active .circle {
+  background: #1e90ff;
+}

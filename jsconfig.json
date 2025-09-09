@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["resources/js/*"],
+      "@components/*": ["resources/js/components/*"],
+      "@views/*": ["resources/js/views/*"],
+      "@css/*": ["resources/css/*"]
+    }
+  },
+  "include": ["resources/js/**/*", "resources/css/**/*"]
+}

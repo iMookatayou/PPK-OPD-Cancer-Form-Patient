@@ -1,0 +1,26 @@
+.section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+.legend {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.row {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+}
+.label {
+  width: 120px;
+  font-weight: 500;
+}
+.input {
+  flex: 1;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

@@ -1,0 +1,12 @@
+/* กำหนดเฉพาะ style ที่ใช้ใน PatientInfo */
+.patient-info-card {
+  margin-bottom: 2rem;
+}
+
+.patient-info-card .form-group input {
+  background-color: #ffffff;
+}
+
+.patient-info-card .form-group select {
+  background-color: #ffffff;
+}

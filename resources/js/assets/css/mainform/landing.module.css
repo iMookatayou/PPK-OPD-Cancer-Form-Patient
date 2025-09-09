@@ -1,0 +1,163 @@
+/* ---------- FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap');
+
+/* ---------- STRUCTURE ---------- */
+.pageWrapper {
+  font-family: 'Prompt', sans-serif;
+}
+
+/* ---------- HERO WRAPPER (ภาพพื้นหลังพร้อมลิมิตกรอบ) ---------- */
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  min-height: 85vh;
+  background-image: url('/storage/app/public/images/cancer01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: brightness(0.65) contrast(1.1) saturate(1.1);
+}
+
+.backgroundImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 70%, white 100%);
+  display: none;
+}
+
+/* ---------- TOP CONTENT OVERLAY ---------- */
+.landingPage {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding-top: 4rem;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  padding: 2rem 1rem;
+}
+
+.heroContent {
+  color: white;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+  max-width: 960px;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: 'Canela', serif;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* ---------- FORM STEP SECTION ---------- */
+.formStepSection {
+  background: #ffffff;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.stepContainer {
+  max-width: 1080px;
+  margin: auto;
+  text-align: center;
+}
+
+.stepContainer h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.stepContainer p {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- GRID FOR STEPS ---------- */
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.menuCard {
+  display: block;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.menuCard:hover {
+  background-color: #e7f2f0;
+  transform: translateY(-3px);
+}
+
+/* ---------- STEP INDICATOR (ถ้ามี) ---------- */
+.stepPreview {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem auto 3rem;
+  padding: 1rem;
+  background: #f1f5f9;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.active .circle {
+  background-color: #1e90ff;
+}

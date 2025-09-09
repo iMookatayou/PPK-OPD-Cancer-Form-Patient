@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Prompt', 'Poppins', sans-serif;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* ✅ พื้นหลัง GIF หรือวิดีโอ */
+.bg-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  filter: brightness(1.05) contrast(1.05);
+}
+
+/* ✅ Layout หลัก */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  gap: 4rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-color: black;
+}
+
+/* ✅ โลโก้ฝั่งซ้าย */
+.logo-absolute {
+  width: 25%; /* ปรับเล็กลงเยอะ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.logo-spin {
+  width: 130px; 
+  height: auto;
+  animation: spinY 12s linear infinite;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes spinY {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+/* ✅ กล่องฟอร์มด้านขวา */
+.login-right {
+  width: 100%;
+  max-width: 440px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.subtitle {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 1rem 0 0.5rem;
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #eef2ff;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  margin-right: 10px;
+  color: #64748b;
+  width: 20px;
+  height: 20px;
+}
+
+.input-wrapper:focus-within {
+  box-shadow: 0 0 0 2px #6366f1;
+}
+
+input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  color: #1e293b;
+}
+
+.error-msg {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.options a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #6366f1;
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.signup {
+  font-size: 0.9rem;
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.signup a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo-absolute {
+  width: 35%;        
+  min-width: 250px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+  .logo-spin {
+    width: 100px; /* ขยายโลโก้นิดสำหรับมือถือ */
+  }
+
+  .login-right {
+    width: 100%;
+    max-width: 100%;
+  }
+}

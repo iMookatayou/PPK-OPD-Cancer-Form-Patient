@@ -1,0 +1,19 @@
+body {
+  background: #f8f9fa;
+  font-family: 'Prompt', sans-serif;
+  color: #32325d;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #5e72e4;
+}

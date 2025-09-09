@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap');
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+  font-family: 'Prompt', sans-serif;
+  padding: 0.5rem 1.5rem;
+}
+
+.topbarInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.topbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoImg {
+  height: 48px;
+  width: auto;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.topbarCenter {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItem > a {
+  color: #374151;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.menuItem > a:hover {
+  color: #9b1c1c;
+}
+
+/* 🔽 Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.menuItem:hover .dropdown {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.dropdown a:hover {
+  background-color: #f9fafb;
+  border-radius: 4px;
+}
+
+/* 🔚 Logout */
+.topbarRight {
+  display: flex;
+  align-items: center;
+}

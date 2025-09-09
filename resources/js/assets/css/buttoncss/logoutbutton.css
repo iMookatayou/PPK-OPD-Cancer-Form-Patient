@@ -1,0 +1,20 @@
+.button-logout {
+  background: transparent;
+  color: Black;
+  font-weight: 500;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.button-logout::before {
+  margin-right: 0.4rem;
+}
+
+.button-logout:hover {
+  color: #ffbdbd;
+  text-decoration: underline;
+}
